@@ -2,6 +2,8 @@ import itertools
 
 import torch
 
+from interpretability.metrics import compute_entropy, compute_iou, compute_absolute_contribution
+
 
 class ConceptExtractor:
     """
@@ -128,3 +130,12 @@ class ConceptExtractor:
             neuron_concepts[neuron_idx] = best_concepts
 
         return neuron_concepts
+
+    def compute_iou(self, activations, concept):
+        return compute_iou(activations, concept)
+
+    def compute_absolute_contribution(self, activations, concept):
+        return compute_absolute_contribution(activations, concept)
+
+    def compute_entropy(self, concept):
+        return compute_entropy(concept)
