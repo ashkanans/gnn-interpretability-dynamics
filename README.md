@@ -35,17 +35,32 @@ gnn-interpretability-dynamics/
 │   └── layers.py               # Custom GNN layers if needed
 ├── interpretability/           # Concept extraction and analysis
 │   ├── __init__.py             # Module initializer
-│   ├── concept_extraction.py   # Concept extraction framework
 │   ├── activation_hooks.py     # Tools for capturing neuron activations
+│   ├── concept_extraction.py   # Concept extraction framework
+│   ├── global_explanations.py  # Model-level explanations
+│   ├── metrics.py              # Concept interpretability metrics (IOU, ABS, ENT)
+│   ├── neuron_analysis.py      # Neuron importance and redundancy analysis
+│   └── visualizations.py       # Graph concept activation maps
 ├── experiments/                # Scripts for running experiments
 │   ├── __init__.py             # Module initializer
-│   ├── train_model.py          # Model training scripts
-│   └── analyze_interpretability.py # Analyze interpretability-accuracy trade-off
+│   ├── analyze_interpretability.py # Analyze interpretability-accuracy trade-off
+│   ├── analyze_tradeoff.py     # Analyze training duration vs. interpretability trade-offs
+│   ├── benchmark_accuracy.py   # Benchmark model accuracy across datasets
+│   ├── benchmark_metrics.py    # Evaluate interpretability metrics
+│   ├── compare_metrics.py      # Compare interpretability metrics against baselines
+│   ├── layer_wise_analysis.py  # Probe concepts at each GNN layer
+│   └── train_model.py          # Model training scripts
 ├── notebooks/                  # Jupyter notebooks for tutorials and demos
 ├── tests/                      # Unit tests for the project
 │   ├── __init__.py             # Module initializer
 │   ├── test_concept_extraction.py # Tests for concept extraction framework
-│   └── test_activation_hooks.py   # Tests for activation tracking
+│   ├── test_activation_hooks.py   # Tests for activation tracking
+│   ├── test_metrics.py            # Tests for interpretability metrics
+│   ├── test_neuron_analysis.py    # Tests for neuron importance and redundancy
+│   ├── test_visualizations.py     # Tests for concept activation maps
+│   ├── test_global_explanations.py # Tests for global explanations
+│   ├── test_layer_wise_analysis.py # Tests for layer-wise concept analysis
+│   └── test_compare_metrics.py    # Tests for interpretability metrics comparison
 ├── utils/                      # Utility scripts
 │   ├── __init__.py             # Module initializer
 │   ├── logging.py              # Logging configuration
